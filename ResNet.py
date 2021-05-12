@@ -69,7 +69,7 @@ class ResNet(nn.Module):
         residual = F.relu(self.bn2_1(self.conv2_1(x)))
         residual = self.bn2_2(self.conv2_2(residual))
         x = x + residual
-        x = F.relu(x + residual)
+        x = F.relu(x)
 
         # Block 3
         residual = F.relu(self.bn3_1(self.conv3_1(x)))
